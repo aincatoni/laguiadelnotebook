@@ -21,7 +21,7 @@
             >
               <h3 class="pcf-text-bold mb-0">
                 Uso principal<span class="text-white">del notebook_</span>
-                <span class="arrow"></span>
+                <span class="arrow-green"></span>
               </h3>
             </div>
             <div class="title-guide__img pcf-bg-yellow ps-4 py-3">
@@ -221,6 +221,40 @@
       </div>
 
       <div class="container my-5">
+        <div class="row">
+          <div
+            class="title-guide pcf-bg-yellow d-flex my-3 justify-content-between px-0"
+          >
+            <div
+              class="title-guide__text px-5 py-3 d-flex align-items-center position-relative"
+            >
+              <h3 class="pcf-text-bold mb-0">
+                Componentes_
+                <span class="arrow-yellow"></span>
+              </h3>
+            </div>
+            <div class="title-guide__img pcf-bg-green ps-4 py-3">
+              <img
+                src="./img/icono_componentes_sin_fondo.png"
+                alt=""
+                class="w-75"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="row my-5">
+          <div class="col-12 p-5 pcf-bg-gray-light">
+            <p class="pcf-paragraph">
+              Estos son los principales componentes que debes considerar a la
+              hora de elegir tu equipo. La composición de estos hará que tu
+              equipo tengo un mayor rendimiento en los programas que requieras.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container my-5">
         <nav>
           <div
             class="nav row justify-content-center text-center"
@@ -228,7 +262,7 @@
             role="tablist"
           >
             <div
-              class="col-6 col-md-2 active procesador buttonTabActive"
+              class="col-6 col-md-2 active procesador buttonTab buttonTabActive mx-md-3 my-3"
               id="nav-procesador-tab"
               data-bs-toggle="tab"
               data-bs-target="#nav-procesador"
@@ -242,7 +276,7 @@
               <h5 class="pcf-paragraph pcf-text-bold my-2">Procesador_</h5>
             </div>
             <div
-              class="col-6 col-md-2 ram buttonTab"
+              class="col-6 col-md-2 ram buttonTab mx-md-3 my-3"
               id="nav-ram-tab"
               data-bs-toggle="tab"
               data-bs-target="#nav-ram"
@@ -252,13 +286,13 @@
               aria-selected="false"
               data-image="img/icono_ram_amarillo.png"
             >
-              <img src="./img/icono_ram_amarillo.png" alt="" />
+              <img src="./img/icono_ram_verde.png" alt="" />
               <h5 class="pcf-text-black pcf-paragraph pcf-text-bold my-2">
                 Memoria RAM_
               </h5>
             </div>
             <div
-              class="col-6 col-md-2 grafica buttonTab"
+              class="col-6 col-md-2 grafica buttonTab mx-md-3 my-3"
               id="nav-grafica-tab"
               data-bs-toggle="tab"
               data-bs-target="#nav-grafica"
@@ -274,7 +308,7 @@
               </h5>
             </div>
             <div
-              class="col-6 col-md-2 almacenamiento buttonTab"
+              class="col-6 col-md-2 almacenamiento buttonTab mx-md-3 my-3"
               id="nav-almacenamiento-tab"
               data-bs-toggle="tab"
               data-bs-target="#nav-almacenamiento"
@@ -290,7 +324,7 @@
               </h5>
             </div>
             <div
-              class="col-6 col-md-2 pantalla buttonTab"
+              class="col-6 col-md-2 pantalla buttonTab mx-md-3 my-3"
               id="nav-pantalla-tab"
               data-bs-toggle="tab"
               data-bs-target="#nav-pantalla"
@@ -308,6 +342,7 @@
           </div>
         </nav>
       </div>
+
       <div class="container my-5">
         <div class="tab-content" id="nav-tabContent">
           <div
@@ -316,7 +351,33 @@
             role="tabpanel"
             aria-labelledby="nav-procesador-tab"
           >
-            Procesador
+            <div>
+              <img src="img/icono_procesador_amarillo.png" alt="" />
+              <h3>Procesador</h3>
+            </div>
+            <div>
+              <ul>
+                <li>
+                  Procesa los datos e interpreta las instrucciones de los
+                  programas
+                </li>
+                <li>Permite que múltiples programas corran paralelamente.</li>
+                <li>
+                  Debes fijarte en los núcleos y la frecuencia, lo cuales
+                  marcarán el rendimiento de este componente. Mientras más
+                  núcleos y mayor frecuencia mejor rendimiento.
+                </li>
+                <li>
+                  Preferir micro arquitecturas con mayor rendimiento, última
+                  generación y con frecuencias elevadas.
+                </li>
+                <li>
+                  En otras palabras si trabajas con muchos programas al mismo
+                  tiempo prefiere mayor núcleos, pero si trabajas con pocos
+                  programas prioriza una alta frecuencia del procesador.
+                </li>
+              </ul>
+            </div>
           </div>
           <div
             class="tab-pane fade"
@@ -359,18 +420,26 @@
       let tabsButtonsImage = document.querySelectorAll("#nav-tab > div > img");
       document
         .getElementById("nav-tab")
-        .addEventListener("click", changeTabButtonImage);
-      function changeTabButtonImage() {
-        let activeTabButton = document.querySelector("#nav-tab > div.active");
-        let activeImage = activeTabButton.dataset.image;
-        tabsButtonsImage.forEach(function (image) {
-          image.src = image.parentNode.dataset.image.replace(
-            "_amarillo",
-            "_verde"
-          );
+        .addEventListener("click", function changeTabButtonImage(e) {
+          let activeTabButton = document.querySelector("#nav-tab > div.active");
+          let activeImage = activeTabButton.dataset.image;
+          tabsButtonsImage.forEach(function (image) {
+            image.src = image.parentNode.dataset.image.replace(
+              "_amarillo",
+              "_verde"
+            );
+          });
+          activeTabButton.querySelector("img").src = activeImage;
+
+          // Cambiar el color de fondo y colo de texto solo en el div activo
+          tabsButtons.forEach(function (button) {
+            if (button === activeTabButton) {
+              button.classList.add("buttonTabActive"); // agrega clase para el botón en estado activo
+            } else {
+              button.classList.remove("buttonTabActive"); // elimina clase para el botón en estado activo
+            }
+          });
         });
-        activeTabButton.querySelector("img").src = activeImage;
-      }
     </script>
   </body>
 </html>
