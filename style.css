@@ -466,7 +466,7 @@ a.buttonSeeAll:hover {
   background-color: var(--gray-light-pcf);
   padding: 10px;
   color: var(--black);
-  transition: 1s;
+  transition: .6s;
 }
 
 .buttonTab img {
