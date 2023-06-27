@@ -532,10 +532,86 @@
           </div>
         </div>
       </div>
-    </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <img src="img/banner_office.png" alt="" class="img-fluid">
+          </div>
+        </div>
+      </div>
+
+
+      <div class="container my-5 ">
+        <div class="row">
+          <div
+            class="title-guide pcf-bg-yellow d-flex my-3 justify-content-between px-0"
+          >
+            <div
+              class="title-guide__text px-5 py-3 d-flex align-items-center position-relative"
+            >
+              <h3 class="pcf-text-bold mb-0">
+                Complementa tu equipo_
+                <span class="arrow-yellow"></span>
+              </h3>
+            </div>
+            <div class="title-guide__img pcf-bg-green ps-4 py-3">
+              <img
+                src="./img/icono_equipo_sin_fondo.png"
+                alt=""
+                class="w-75"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="container my-5">
+        <nav>
+          <div class="row justify-content-center text-center hoverButtons" id="botonesHover">
+            <div class="col-6 col-md-3 my-3">
+              <div class="active mouseyteclado buttonTab px-md-3"
+                
+              >
+                <img src="img/icono_mouse_y_teclados_verde.png" alt="" onmouseover="changeImage(this, './img/icono_mouse_y_teclados_verde.png')" onmouseout="changeImage(this, './img/icono_mouse_y_teclados_amarillo.png')"/>
+                <h5 class="pcf-paragraph pcf-text-bold my-2">Mouses y Teclados_</h5>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 my-3" >
+              <div class="bolsos buttonTab px-md-3" >
+                <img src="./img/icono_bolsos_verde.png" alt="" onmouseover="changeImage(this, './img/icono_bolsos_verde.png')" onmouseout="changeImage(this, './img/icono_bolsos_amarillo.png')"/>
+                <h5 class="pcf-paragraph pcf-text-bold my-2">Bolsos_</h5>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 my-3" >
+              <div class="docking buttonTab px-md-3" >
+                <img src="./img/icono_docking_verde.png" alt="" onmouseover="changeImage(this, './img/icono_docking_verde.png')" onmouseout="changeImage(this, './img/icono_docking_amarillo.png')"/>
+                <h5 class="pcf-paragraph pcf-text-bold my-2">Dockings_</h5>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 my-3" >
+              <div class="monitores buttonTab px-md-3" >
+                <img src="./img/icono_monitores_verde.png" alt="" onmouseover="changeImage(this, './img/icono_monitores_verde.png')" onmouseout="changeImage(this, './img/icono_monitores_amarillo.png')"/>
+                <h5 class="pcf-paragraph pcf-text-bold my-2">Monitores_</h5>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    
+      <script>
+        function changeImage(element, newImageSrc) {
+          element.setAttribute('src', newImageSrc);
+        }
+      </script>
+
 
     <script>
       let tabsButtons = document.querySelectorAll("#nav-tab > div");
+      // console.log(tabsButtons);
       let tabsButtonsImage = document.querySelectorAll("#nav-tab > div > img");
       document
         .getElementById("nav-tab")
@@ -560,5 +636,7 @@
           });
         });
     </script>
+
+    
   </body>
 </html>
