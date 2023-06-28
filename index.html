@@ -571,41 +571,63 @@
 
       <div class="container my-5">
         <nav>
-          <div class="row justify-content-center text-center hoverButtons" id="botonesHover">
+          <div class="row justify-content-center text-center" id="botonesHover">
             <div class="col-6 col-md-3 my-3">
-              <div class="active mouseyteclado buttonTab px-md-3"
-                
-              >
-                <img src="img/icono_mouse_y_teclados_verde.png" alt="" onmouseover="changeImage(this, './img/icono_mouse_y_teclados_verde.png')" onmouseout="changeImage(this, './img/icono_mouse_y_teclados_amarillo.png')"/>
-                <h5 class="pcf-paragraph pcf-text-bold my-2">Mouses y Teclados_</h5>
+              <div class="mouseyteclado buttonsHover px-md-3">
+                <a href="">
+                  <img src="img/icono_mouse_y_teclados_verde.png" alt="" />
+                  <h5 class="pcf-paragraph pcf-text-bold my-2">Mouses y Teclados_</h5>
+                </a>
               </div>
             </div>
-            <div class="col-6 col-md-3 my-3" >
-              <div class="bolsos buttonTab px-md-3" >
-                <img src="./img/icono_bolsos_verde.png" alt="" onmouseover="changeImage(this, './img/icono_bolsos_verde.png')" onmouseout="changeImage(this, './img/icono_bolsos_amarillo.png')"/>
-                <h5 class="pcf-paragraph pcf-text-bold my-2">Bolsos_</h5>
+            <div class="col-6 col-md-3 my-3">
+              <div class="bolsos buttonsHover px-md-3">
+                <a href="">
+                  <img src="./img/icono_bolsos_verde.png" alt="" />
+                  <h5 class="pcf-paragraph pcf-text-bold my-2">Bolsos_</h5>
+                </a>
               </div>
             </div>
-            <div class="col-6 col-md-3 my-3" >
-              <div class="docking buttonTab px-md-3" >
-                <img src="./img/icono_docking_verde.png" alt="" onmouseover="changeImage(this, './img/icono_docking_verde.png')" onmouseout="changeImage(this, './img/icono_docking_amarillo.png')"/>
-                <h5 class="pcf-paragraph pcf-text-bold my-2">Dockings_</h5>
+            <div class="col-6 col-md-3 my-3">
+              <div class="docking buttonsHover px-md-3">
+                <a href="">
+                  <img src="./img/icono_docking_verde.png" alt="" />
+                  <h5 class="pcf-paragraph pcf-text-bold my-2">Dockings_</h5>
+                </a>
               </div>
             </div>
-            <div class="col-6 col-md-3 my-3" >
-              <div class="monitores buttonTab px-md-3" >
-                <img src="./img/icono_monitores_verde.png" alt="" onmouseover="changeImage(this, './img/icono_monitores_verde.png')" onmouseout="changeImage(this, './img/icono_monitores_amarillo.png')"/>
-                <h5 class="pcf-paragraph pcf-text-bold my-2">Monitores_</h5>
+            <div class="col-6 col-md-3 my-3">
+              <div class="monitores buttonsHover px-md-3">
+                <a href="">
+                  <img src="./img/icono_monitores_verde.png" alt="" />
+                  <h5 class="pcf-paragraph pcf-text-bold my-2">Monitores_</h5>
+                </a>
               </div>
             </div>
           </div>
         </nav>
       </div>
-    
+      
       <script>
-        function changeImage(element, newImageSrc) {
-          element.setAttribute('src', newImageSrc);
-        }
+       // Obtener todos los elementos con la clase 'buttonsHover'
+  const buttons = Array.from(document.getElementsByClassName('buttonsHover'));
+
+// Agregar el evento 'mouseover' y 'mouseout' a cada botón utilizando forEach
+buttons.forEach(function(button) {
+  const img = button.getElementsByTagName('img')[0];
+  const src = img.getAttribute('src');
+  const hoverSrc = src.replace('_verde.png', '_amarillo.png');
+
+  button.addEventListener('mouseover', function() {
+    img.setAttribute('src', hoverSrc);
+    button.classList.add("buttonTabActive"); // agrega clase para el botón en estado activo
+  });
+
+  button.addEventListener('mouseout', function() {
+    img.setAttribute('src', src);
+    button.classList.remove("buttonTabActive"); // quita clase para el botón en estado activo
+  });
+});
       </script>
 
 
