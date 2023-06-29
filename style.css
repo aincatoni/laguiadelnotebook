@@ -460,6 +460,7 @@ a.buttonSeeAll:hover {
 .pcf-lista {
   min-height: 250px;
   line-height: 2.2em;
+  list-style-position: outside;
 }
 .buttonTab,
 .buttonsHover {
