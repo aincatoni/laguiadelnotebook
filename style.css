@@ -480,3 +480,21 @@ a.buttonSeeAll:hover {
   padding: 10px;
   color: var(--white) !important;
 }
+
+.pcf-marcas {
+  min-height: 70px;
+}
+
+.pcf-marcas img {
+  width: 45px;
+}
+
+@media screen and (min-width: 768px) {
+  .pcf-marcas {
+    min-height: 150px;
+  }
+
+  .pcf-marcas img {
+    width: 70px;
+  }
+}

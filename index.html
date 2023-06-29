@@ -257,12 +257,12 @@
       <div class="container my-5">
         <nav>
           <div
-            class="nav row justify-content-center text-center"
+            class="nav row justify-content-start justify-content-md-center text-center"
             id="nav-tab"
             role="tablist"
           >
             <div
-              class="col-6 col-md-2 active procesador buttonTab buttonTabActive mx-md-3 my-3"
+              class="col-6 col-md-2 active  mx-md-3 my-3"
               id="nav-procesador-tab"
               data-bs-toggle="tab"
               data-bs-target="#nav-procesador"
@@ -272,11 +272,13 @@
               aria-selected="true"
               data-image="./img/icono_procesador_amarillo.png"
             >
-              <img src="img/icono_procesador_amarillo.png" alt="" />
-              <h5 class="pcf-paragraph pcf-text-bold my-2">Procesador_</h5>
+              <div class="procesador buttonTab buttonTabActive">
+                <img src="img/icono_procesador_amarillo.png" alt="" />
+                <h5 class="pcf-paragraph pcf-text-bold my-2">Procesador_</h5>
+              </div>
             </div>
             <div
-              class="col-6 col-md-2 ram buttonTab mx-md-3 my-3"
+              class="col-6 col-md-2  mx-md-3 my-3"
               id="nav-ram-tab"
               data-bs-toggle="tab"
               data-bs-target="#nav-ram"
@@ -286,13 +288,15 @@
               aria-selected="false"
               data-image="img/icono_ram_amarillo.png"
             >
-              <img src="./img/icono_ram_verde.png" alt="" />
-              <h5 class="pcf-paragraph pcf-text-bold my-2">
-                Memoria RAM_
-              </h5>
+              <div class="ram buttonTab">
+                <img src="./img/icono_ram_verde.png" alt="" />
+                <h5 class="pcf-paragraph pcf-text-bold my-2">
+                  Memoria RAM_
+                </h5>
+              </div>
             </div>
             <div
-              class="col-6 col-md-2 grafica buttonTab mx-md-3 my-3"
+              class="col-6 col-md-2  mx-md-3 my-3"
               id="nav-grafica-tab"
               data-bs-toggle="tab"
               data-bs-target="#nav-grafica"
@@ -302,13 +306,15 @@
               aria-selected="false"
               data-image="img/icono_grafica_amarillo.png"
             >
-              <img src="./img/icono_grafica_verde.png" alt="" />
-              <h5 class="pcf-paragraph pcf-text-bold my-2">
-                Tarjeta gráfica_
-              </h5>
+              <div class="grafica buttonTab">
+                <img src="./img/icono_grafica_verde.png" alt="" />
+                <h5 class="pcf-paragraph pcf-text-bold my-2">
+                  Tarjeta gráfica_
+                </h5>
+              </div>
             </div>
             <div
-              class="col-6 col-md-2 almacenamiento buttonTab mx-md-3 my-3"
+              class="col-6 col-md-2  mx-md-3 my-3"
               id="nav-almacenamiento-tab"
               data-bs-toggle="tab"
               data-bs-target="#nav-almacenamiento"
@@ -318,13 +324,15 @@
               aria-selected="false"
               data-image="img/icono_almacenamiento_amarillo.png"
             >
-              <img src="./img/icono_almacenamiento_verde.png" alt="" />
-              <h5 class="pcf-paragraph pcf-text-bold my-2">
-                Almacenamiento_
-              </h5>
+              <div class="almacenamiento buttonTab">
+                <img src="./img/icono_almacenamiento_verde.png" alt="" />
+                <h5 class="pcf-paragraph pcf-text-bold my-2">
+                  Almacenamiento_
+                </h5>
+              </div>
             </div>
             <div
-              class="col-6 col-md-2 pantalla buttonTab mx-md-3 my-3"
+              class="col-6 col-md-2  mx-md-3 my-3"
               id="nav-pantalla-tab"
               data-bs-toggle="tab"
               data-bs-target="#nav-pantalla"
@@ -334,10 +342,12 @@
               aria-selected="false"
               data-image="img/icono_pantalla_amarillo.png"
             >
-              <img src="./img/icono_pantalla_verde.png" alt="" />
-              <h5 class="pcf-paragraph pcf-text-bold my-2">
-                Pantalla_
-              </h5>
+              <div class="pantalla buttonTab">
+                <img src="./img/icono_pantalla_verde.png" alt="" />
+                <h5 class="pcf-paragraph pcf-text-bold my-2">
+                  Pantalla_
+                </h5>
+              </div>
             </div>
           </div>
         </nav>
@@ -634,48 +644,48 @@
         </div>
         <div class="row text-center align-item">
           <div class="col-6 col-md-4 p-2">
-            <div class="pcf-border-green pcf-bg-gray-light px-md-5 py-md-2 d-flex align-items-center justify-content-center" style="@media (main-width: 768px) {min-height: 150px;}; min-height: 70px;">
-              <img src="img/marca_hp.png" alt="" style="width: 35px; height: auto;">
+            <div class="pcf-border-green pcf-bg-gray-light px-md-5 py-md-2 d-flex align-items-center justify-content-center pcf-marcas">
+              <img src="img/marca_hp.png" alt="">
             </div>
           </div>
           <div class="col-6 col-md-4 p-2">
-            <div class="pcf-border-green pcf-bg-gray-light px-md-5 py-md-2 d-flex align-items-center justify-content-center" style="@media (main-width: 768px) {min-height: 150px;}; min-height: 70px;">
-              <img src="img/marca_asus.png" alt="" style="width: 35px; height: auto;">
+            <div class="pcf-border-green pcf-bg-gray-light px-md-5 py-md-2 d-flex align-items-center justify-content-center pcf-marcas" >
+              <img src="img/marca_asus.png" alt="">
             </div>
           </div>
           <div class="col-6 col-md-4 p-2">
-            <div class="pcf-border-green pcf-bg-gray-light px-md-5 py-md-2 d-flex align-items-center justify-content-center" style="@media (main-width: 768px) {min-height: 150px;}; min-height: 70px;">
-              <img src="img/marca_lenovo.png" alt="" style="width: 35px; height: auto;">
+            <div class="pcf-border-green pcf-bg-gray-light px-md-5 py-md-2 d-flex align-items-center justify-content-center pcf-marcas" >
+              <img src="img/marca_lenovo.png" alt="">
             </div>
           </div>
           <div class="col-6 col-md-4 p-2">
-            <div class="pcf-border-green pcf-bg-gray-light px-md-5 py-md-2 d-flex align-items-center justify-content-center" style="@media (main-width: 768px) {min-height: 150px;}; min-height: 70px;">
-              <img src="img/marca_dell.png" alt="" style="width: 35px; height: auto;">
+            <div class="pcf-border-green pcf-bg-gray-light px-md-5 py-md-2 d-flex align-items-center justify-content-center pcf-marcas" >
+              <img src="img/marca_dell.png" alt="">
             </div>
           </div>
           <div class="col-6 col-md-4 p-2">
-            <div class="pcf-border-green pcf-bg-gray-light px-md-5 py-md-2 d-flex align-items-center justify-content-center" style="@media (main-width: 768px) {min-height: 150px;}; min-height: 70px;">
-              <img src="img/marca_gear.png" alt="" style="width: 35px; height: auto;">
+            <div class="pcf-border-green pcf-bg-gray-light px-md-5 py-md-2 d-flex align-items-center justify-content-center pcf-marcas" >
+              <img src="img/marca_gear.png" alt="">
             </div>
           </div>
           <div class="col-6 col-md-4 p-2">
-            <div class="pcf-border-green pcf-bg-gray-light px-md-5 py-md-2 d-flex align-items-center justify-content-center" style="@media (main-width: 768px) {min-height: 150px;}; min-height: 70px;">
-              <img src="img/marca_huawei.png" alt="" style="width: 35px; height: auto;">
+            <div class="pcf-border-green pcf-bg-gray-light px-md-5 py-md-2 d-flex align-items-center justify-content-center pcf-marcas" >
+              <img src="img/marca_huawei.png" alt="">
             </div>
           </div>
           <div class="col-6 col-md-4 p-2">
-            <div class="pcf-border-green pcf-bg-gray-light px-md-5 py-md-2 d-flex align-items-center justify-content-center" style="@media (main-width: 768px) {min-height: 150px;}; min-height: 70px;">
-              <img src="img/marcas_apple.png" alt="" style="width: 35px; height: auto;">
+            <div class="pcf-border-green pcf-bg-gray-light px-md-5 py-md-2 d-flex align-items-center justify-content-center pcf-marcas" >
+              <img src="img/marcas_apple.png" alt="">
             </div>
           </div>
           <div class="col-6 col-md-4 p-2">
-            <div class="pcf-border-green pcf-bg-gray-light px-md-5 py-md-2 d-flex align-items-center justify-content-center" style="@media (main-width: 768px) {min-height: 150px;}; min-height: 70px;">
-              <img src="img/marca_msi.png" alt="" style="width: 35px; height: auto;">
+            <div class="pcf-border-green pcf-bg-gray-light px-md-5 py-md-2 d-flex align-items-center justify-content-center pcf-marcas" >
+              <img src="img/marca_msi.png" alt="">
             </div>
           </div>
           <div class="col-6 col-md-4 p-2">
-            <div class="pcf-border-green pcf-bg-gray-light px-md-5 py-md-2 d-flex align-items-center justify-content-center" style="@media (main-width: 768px) {min-height: 150px;}; min-height: 70px;">
-              <img src="img/marca_acer.png" alt="" style="width: 35px; height: auto;">
+            <div class="pcf-border-green pcf-bg-gray-light px-md-5 py-md-2 d-flex align-items-center justify-content-center pcf-marcas" >
+              <img src="img/marca_acer.png" alt="">
             </div> 
           </div>
         </div>
@@ -723,12 +733,12 @@ buttons.forEach(function(button) {
           });
           activeTabButton.querySelector("img").src = activeImage;
 
-          // Cambiar el color de fondo y colo de texto solo en el div activo
+          // Cambiar el color de fondo y color de texto solo en el div activo
           tabsButtons.forEach(function (button) {
             if (button === activeTabButton) {
-              button.classList.add("buttonTabActive"); // agrega clase para el botón en estado activo
+              button.querySelector("div").classList.add("buttonTabActive"); // agrega clase para el botón en estado activo
             } else {
-              button.classList.remove("buttonTabActive"); // elimina clase para el botón en estado activo
+              button.querySelector("div").classList.remove("buttonTabActive"); // elimina clase para el botón en estado activo
             }
           });
         });
