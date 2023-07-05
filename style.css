@@ -113,24 +113,22 @@
 /** Tamaños de Texto (Títulos y Parrafo) **/
 
 .pcf-title-big {
-  font-size: 4em !important;
-}
-
-.pcf-title-medium {
   font-size: 2.5em !important;
 }
 
+.pcf-title-medium {
+  font-size: 1.7em !important;
+}
+
 .pcf-title-small {
-  font-size: 1.5em !important;
+  font-size: 0.9em !important;
 }
 
 .pcf-paragraph {
   font-family: "Signika", Ubuntu-Bold, sans-serif;
-  font-size: 1.2em;
-  line-height: 1.3em;
+  font-size: 0.8em;
+  line-height: 0.9em;
   margin: 10px 0;
-  margin-top: 20px;
-  margin-bottom: 20px;
   font-weight: 400;
 }
 
@@ -458,7 +456,7 @@ a.buttonSeeAll:hover {
 }
 
 .pcf-lista {
-  min-height: 250px;
+  min-height: 150px;
   line-height: 2.2em;
   list-style-position: outside;
 }
@@ -490,7 +488,49 @@ a.buttonSeeAll:hover {
   width: 45px;
 }
 
-@media screen and (min-width: 768px) {
+
+/* Tamaños Desktop */
+
+@media (min-width: 768px) {
+
+  /*** Textos ***/
+  
+  .pcf-title-big {
+    font-size: 4em !important;
+  }
+  
+  .pcf-title-medium {
+    font-size: 2.5em !important;
+  }
+  
+  .pcf-title-small {
+    font-size: 1.5em !important;
+  }
+
+  .pcf-paragraph{
+  font-family: "Signika", Ubuntu-Bold, sans-serif;
+  font-size: 1.2em;
+  line-height: 1.3em;
+  margin: 10px 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: 400;
+  }
+  
+  /*** Cards ***/
+
+  .pcf-greenCard {
+    min-height: 830px;;
+  }
+
+  .pcf-lista {
+    min-height: 250px;
+    line-height: 2.2em;
+    list-style-position: outside;
+  }
+
+  /*** Marcas ***/
+
   .pcf-marcas {
     min-height: 150px;
   }

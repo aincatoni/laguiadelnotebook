@@ -45,10 +45,10 @@
         </div>
       </div>
 
-      <div class="container">
+      <div class="container text-break">
         <div class="row justify-content-center">
           <div class="col-12 col-md-6 px-2 my-3">
-            <div class="pcf-border-green" style="min-height: 830px">
+            <div class="pcf-border-green pcf-greenCard">
               <div class="pcf-bg-green px-4 py-4">
                 <div class="row align-items-center">
                   <div class="col-4">
@@ -85,7 +85,7 @@
           </div>
 
           <div class="col-12 col-md-6 px-2 my-3">
-            <div class="pcf-border-green" style="min-height: 830px">
+            <div class="pcf-border-green pcf-greenCard">
               <div class="pcf-bg-green px-4 py-4">
                 <div class="row align-items-center">
                   <div class="col-4">
@@ -121,7 +121,7 @@
           </div>
 
           <div class="col-12 col-md-6 px-2 my-3">
-            <div class="pcf-border-green" style="min-height: 830px">
+            <div class="pcf-border-green pcf-greenCard">
               <div class="pcf-bg-green px-4 py-4">
                 <div class="row align-items-center">
                   <div class="col-4">
@@ -140,7 +140,7 @@
               </div>
               <div class="p-2 p-md-5 d-flex flex-column justify-content-evenly">
                 <p
-                  class="pcf-title-small pcf-text-regular"
+                  class="pcf-title-small pcf-text-bold"
                   style="min-height: 50px"
                 >
                   Es importante que identifiques el tipo de juegos y la
@@ -170,7 +170,7 @@
           </div>
 
           <div class="col-12 col-md-6 px-2 my-3">
-            <div class="pcf-border-green" style="min-height: 830px">
+            <div class="pcf-border-green pcf-greenCard">
               <div class="pcf-bg-green px-4 py-4">
                 <div class="row align-items-center">
                   <div class="col-4">
@@ -274,7 +274,7 @@
             >
               <div class="procesador buttonTab buttonTabActive">
                 <img src="img/icono_procesador_amarillo.png" alt="" />
-                <h5 class="pcf-paragraph pcf-text-bold my-2">Procesador_</h5>
+                <h5 class="pcf-title-small pcf-text-bold my-2">Procesador_</h5>
               </div>
             </div>
             <div
@@ -290,7 +290,7 @@
             >
               <div class="ram buttonTab">
                 <img src="./img/icono_ram_verde.png" alt="" />
-                <h5 class="pcf-paragraph pcf-text-bold my-2">
+                <h5 class="pcf-title-small pcf-text-bold my-2">
                   Memoria RAM_
                 </h5>
               </div>
@@ -308,7 +308,7 @@
             >
               <div class="grafica buttonTab">
                 <img src="./img/icono_grafica_verde.png" alt="" />
-                <h5 class="pcf-paragraph pcf-text-bold my-2">
+                <h5 class="pcf-title-small pcf-text-bold my-2">
                   Tarjeta gráfica_
                 </h5>
               </div>
@@ -326,7 +326,7 @@
             >
               <div class="almacenamiento buttonTab">
                 <img src="./img/icono_almacenamiento_verde.png" alt="" />
-                <h5 class="pcf-paragraph pcf-text-bold my-2">
+                <h5 class="pcf-title-small pcf-text-bold my-2">
                   Almacenamiento_
                 </h5>
               </div>
@@ -344,7 +344,7 @@
             >
               <div class="pantalla buttonTab">
                 <img src="./img/icono_pantalla_verde.png" alt="" />
-                <h5 class="pcf-paragraph pcf-text-bold my-2">
+                <h5 class="pcf-title-small pcf-text-bold my-2">
                   Pantalla_
                 </h5>
               </div>
@@ -690,60 +690,6 @@
           </div>
         </div>
       </div>
-
-
-      
-      <script>
-       // Obtener todos los elementos con la clase 'buttonsHover'
-  const buttons = Array.from(document.getElementsByClassName('buttonsHover'));
-
-// Agregar el evento 'mouseover' y 'mouseout' a cada botón utilizando forEach
-buttons.forEach(function(button) {
-  const img = button.getElementsByTagName('img')[0];
-  const src = img.getAttribute('src');
-  const hoverSrc = src.replace('_verde.png', '_amarillo.png');
-
-  button.addEventListener('mouseover', function() {
-    img.setAttribute('src', hoverSrc);
-    button.classList.add("buttonTabActive"); // agrega clase para el botón en estado activo
-  });
-
-  button.addEventListener('mouseout', function() {
-    img.setAttribute('src', src);
-    button.classList.remove("buttonTabActive"); // quita clase para el botón en estado activo
-  });
-});
-      </script>
-
-
-    <script>
-      let tabsButtons = document.querySelectorAll("#nav-tab > div");
-      // console.log(tabsButtons);
-      let tabsButtonsImage = document.querySelectorAll("#nav-tab > div > img");
-      document
-        .getElementById("nav-tab")
-        .addEventListener("click", function changeTabButtonImage(e) {
-          let activeTabButton = document.querySelector("#nav-tab > div.active");
-          let activeImage = activeTabButton.dataset.image;
-          tabsButtonsImage.forEach(function (image) {
-            image.src = image.parentNode.dataset.image.replace(
-              "_amarillo",
-              "_verde"
-            );
-          });
-          activeTabButton.querySelector("img").src = activeImage;
-
-          // Cambiar el color de fondo y color de texto solo en el div activo
-          tabsButtons.forEach(function (button) {
-            if (button === activeTabButton) {
-              button.querySelector("div").classList.add("buttonTabActive"); // agrega clase para el botón en estado activo
-            } else {
-              button.querySelector("div").classList.remove("buttonTabActive"); // elimina clase para el botón en estado activo
-            }
-          });
-        });
-    </script>
-
-    
+<script src="js/app.js"></script>
   </body>
 </html>
